@@ -32,7 +32,11 @@ public class GrandMeep : MonoBehaviour
             }           
             if (light) OnSummonedLight(light);
         }
-        if (Input.GetMouseButtonUp(0)) OnDeSummonLight(light);
+        if (Input.GetMouseButtonUp(0))
+        {
+            Destroy(light);
+        }
+
         transform.Translate(Input.GetAxis("Horizontal")/speedMult, Input.GetAxis("Vertical")/speedMult,0);
     }
 }
