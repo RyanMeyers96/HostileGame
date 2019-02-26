@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,22 +9,46 @@ public class MeepBehavior : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     [SerializeField]
     private GameObject grandMeep;
+
+    private GameObject light;
+    
+    
+
     private enum state
     {
-        follow,
+        followGM,
+        followLight,
         idle,
         eaten
     }
 
     public float testDistance;
-    
-    private state myState;
+    [SerializeField]
+    private state myState = state.idle;
        // Start is called before the first frame update
        void Start()
        {
            navMeshAgent = GetComponent<NavMeshAgent>();
+           
        }
-    
+
+       private GrandMeep.SummonLight LightRemoved()
+       {
+           if (myState == state.followLight)
+           {
+               Debug.Log("here");
+               myState = state.idle;
+           }
+
+           return null;
+       }
+
+       private GrandMeep.SummonLight LightSummoned()
+       {
+            myState = state.followLight;
+            return null;
+       }
+
        // Update is called once per frame
        void Update()
        {
@@ -34,46 +59,56 @@ public class MeepBehavior : MonoBehaviour
                    {
                        CheckSight();
                    }
-
-                   Move(this.gameObject);
+                   Move(gameObject);
                    break;
-               case  state.follow:
+               case  state.followGM:
+                   grandMeep.GetComponent<GrandMeep>().OnSummonedLight += LightSummoned();
+                   grandMeep.GetComponent<GrandMeep>().OnDeSummonLight += LightRemoved();
                    //check if summoned light will be held down or one time trigger event if so need seperate state for it
                    Move(grandMeep);
                    break;
+               case state.followLight:
+                   if (!light) Move(light);
+                   break;
                case state.eaten:
-                   Destroy(this.gameObject);
+                   grandMeep.GetComponent<GrandMeep>().OnSummonedLight -= LightSummoned();
+                   grandMeep.GetComponent<GrandMeep>().OnDeSummonLight -= LightRemoved();
+                   Destroy(gameObject);
                    break;
            }
        }
+
+       #region CheckingCode
 
        private void CheckSight()
        {
            RaycastHit hit;
            if (Physics.Linecast(transform.position, grandMeep.transform.position, out hit))
            {
+               Debug.Log("CheckSight");
                if (hit.transform.gameObject == grandMeep)
                {
-                   myState = state.follow;
+                   myState = state.followGM;
                }
            }
        }
 
        private bool CheckDistance()
        {
-           if (Vector3.Distance(this.gameObject.transform.position, grandMeep.transform.position) > testDistance)
+           Debug.Log("CheckDistance");
+           if (Vector3.Distance(gameObject.transform.position, grandMeep.transform.position) > testDistance)
            {
+               
                return false;
            }
            return true;
        }
-
+       
+       #endregion
        private void Move(GameObject target)
        {
            navMeshAgent.destination = target.transform.position;
        }
-
-       
        /*  collision with grand meep? check for light?
        *   add meeps to event cast from grand meep and target grand meep
        */
