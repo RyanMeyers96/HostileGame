@@ -32,21 +32,11 @@ public class MeepBehavior : MonoBehaviour
            
        }
 
-       private GrandMeep.SummonLight LightRemoved()
-       {
-           if (myState == state.followLight)
-           {
-               Debug.Log("here");
-               myState = state.idle;
-           }
-
-           return null;
-       }
-
-       private GrandMeep.SummonLight LightSummoned()
-       {
-            myState = state.followLight;
-            return null;
+       public void LightSummoned(GameObject newLight)
+       {       
+            light = newLight;
+            if (light != null) myState = state.followLight;
+            //return null;
        }
 
        // Update is called once per frame
@@ -62,17 +52,17 @@ public class MeepBehavior : MonoBehaviour
                    Move(gameObject);
                    break;
                case  state.followGM:
-                   grandMeep.GetComponent<GrandMeep>().OnSummonedLight += LightSummoned();
-                   grandMeep.GetComponent<GrandMeep>().OnDeSummonLight += LightRemoved();
+                   GrandMeep.OnSummonedLight += LightSummoned;
                    //check if summoned light will be held down or one time trigger event if so need seperate state for it
                    Move(grandMeep);
                    break;
                case state.followLight:
-                   if (!light) Move(light);
+                   GrandMeep.OnSummonedLight -= LightSummoned;
+                   if (light) Move(light);
+                   else myState = state.idle;
                    break;
                case state.eaten:
-                   grandMeep.GetComponent<GrandMeep>().OnSummonedLight -= LightSummoned();
-                   grandMeep.GetComponent<GrandMeep>().OnDeSummonLight -= LightRemoved();
+                   GrandMeep.OnSummonedLight -= LightSummoned;
                    Destroy(gameObject);
                    break;
            }
