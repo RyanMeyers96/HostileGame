@@ -99,22 +99,30 @@ public class MeepBehavior : MonoBehaviour
        {
            navMeshAgent.destination = target.transform.position;
        }
-       /*  collision with grand meep? check for light?
-       *   add meeps to event cast from grand meep and target grand meep
-       */
-      
-       /*  Grand meep Event
-       *   when Grand meep makes light at other point change target of meep
-       */
-      
-       /*  Movement
-       *   joined to grandmeeps event
-       *   move toward target location
-       */
-       
-       /*     check if on platform
-        *     when on platform disable navmesh agent swap state and activate platform
-        *     when platform stops reenable mesh and change state again.
-        */
+    /*  collision with grand meep? check for light?
+    *   add meeps to event cast from grand meep and target grand meep
+    */
 
+
+
+    /*  Grand meep Event
+    *   when Grand meep makes light at other point change target of meep
+    */
+
+    /*  Movement
+    *   joined to grandmeeps event
+    *   move toward target location
+    */
+
+    /*     check if on platform
+     *     when on platform disable navmesh agent swap state and activate platform
+     *     when platform stops reenable mesh and change state again.
+     */
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject == grandMeep)
+        {
+            Physics.IgnoreCollision(grandMeep.GetComponent<Collider>(), this.gameObject.GetComponent<Collider>());
+        }
+    }
 }
