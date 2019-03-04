@@ -13,6 +13,7 @@ public class GrandMeep : MonoBehaviour
     [SerializeField]
     private GameObject lightPrefab;
     private GameObject light;
+    public int meepFollowers;
 
     private void Start()
     {
@@ -25,8 +26,7 @@ public class GrandMeep : MonoBehaviour
         {
             RaycastHit hit;
             if (Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition), out hit))
-            {
-                Debug.Log("detect when down Here");
+            {                
                 light = Instantiate(lightPrefab, new Vector3(hit.point.x, hit.point.y, 1), new Quaternion(0, 0, 0, 0));
                 if (OnSummonedLight != null)OnSummonedLight(light);
             }         
@@ -34,5 +34,15 @@ public class GrandMeep : MonoBehaviour
         if (Input.GetMouseButtonUp(0)) Destroy(light);
         
         transform.Translate(Input.GetAxis("Horizontal")/speedMult, Input.GetAxis("Vertical")/speedMult,0);
+    }
+    
+    private void UpdateLight()
+    {
+    /*
+    take number of meep followers
+    get light source reference
+    set either lintensity or range to be increase by a ratio depended on amount of meeps
+    possible 10 % increase for every meep?
+    */
     }
 }

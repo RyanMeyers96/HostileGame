@@ -9,7 +9,7 @@ public class MeepBehavior : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     [SerializeField]
     private GameObject grandMeep;
-
+    private bool following = false;
     private GameObject light;
     
     
@@ -29,7 +29,8 @@ public class MeepBehavior : MonoBehaviour
        void Start()
        {
            navMeshAgent = GetComponent<NavMeshAgent>();
-           
+           grandMeep = GameObject.FindWithTag("Player");
+          
        }
 
        public void LightSummoned(GameObject newLight)
@@ -42,9 +43,11 @@ public class MeepBehavior : MonoBehaviour
        // Update is called once per frame
        void Update()
        {
+       CheckFollower();
            switch (myState)
-           {
+           {           
                case state.idle:
+               GrandMeep.OnSummonedLight -= LightSummoned;
                    if (CheckDistance())
                    {
                        CheckSight();
@@ -52,6 +55,10 @@ public class MeepBehavior : MonoBehaviour
                    Move(gameObject);
                    break;
                case  state.followGM:
+                   if (CheckDistance())
+                   {
+                        CheckSight();
+                   }
                    GrandMeep.OnSummonedLight += LightSummoned;
                    //check if summoned light will be held down or one time trigger event if so need seperate state for it
                    Move(grandMeep);
@@ -70,25 +77,43 @@ public class MeepBehavior : MonoBehaviour
 
        #region CheckingCode
 
+       private void CheckFollower()
+       {
+           if (myState == state.followGM)
+           {
+               if (!following) 
+               {
+                   grandMeep.GetComponent<GrandMeep>().meepFollowers++;
+                   following = true;
+               }
+           } else
+           {       
+               if (following) 
+               {
+                   grandMeep.GetComponent<GrandMeep>().meepFollowers--;
+                   following = false;
+               }
+           }
+       }
        private void CheckSight()
        {
            RaycastHit hit;
            if (Physics.Linecast(transform.position, grandMeep.transform.position, out hit))
-           {
-               Debug.Log("CheckSight");
+           {              
                if (hit.transform.gameObject == grandMeep)
                {
-                   myState = state.followGM;
+                    myState = state.followGM;
+                    return;
                }
+               myState = state.idle;
            }
        }
 
        private bool CheckDistance()
-       {
-           Debug.Log("CheckDistance");
+       {           
            if (Vector3.Distance(gameObject.transform.position, grandMeep.transform.position) > testDistance)
            {
-               
+               myState = state.idle;
                return false;
            }
            return true;
