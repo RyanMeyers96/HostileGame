@@ -664,7 +664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 390148323}
-  offset: {x: 0, y: 0, z: -16}
+  offset: {x: 0, y: 0, z: -19}
   boundX: 0
   boundY: 0
   smoothSpeed: 0.125
