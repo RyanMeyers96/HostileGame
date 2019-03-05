@@ -20,7 +20,7 @@ public class CameraController : MonoBehaviour
 		boundY = target.position.y;
 		
 		boundX = (Mathf.Clamp(boundX, -4f, 4f));
-		boundY = (Mathf.Clamp(boundY, -1f, 40f));
+		boundY = (Mathf.Clamp(boundY, -1f, 45f));
 		
 		//set the desiredPosition - this is where the camera wants to be, then sends the smoothPosition - this makes the camera move smoothly towards the position
 		Vector3 desiredPosition = new Vector3(boundX, boundY, target.position.z) + offset;

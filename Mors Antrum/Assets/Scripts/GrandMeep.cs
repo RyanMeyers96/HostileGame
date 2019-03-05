@@ -18,6 +18,7 @@ public class GrandMeep : MonoBehaviour
     private void Start()
     {
         mainCamera = FindObjectOfType<Camera>();
+        meepFollowers = 0;
     }
 
     void Update()

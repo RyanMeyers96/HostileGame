@@ -41,8 +41,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.3915094, g: 1, b: 0.9705294, a: 1}
-  m_Intensity: 2
+  m_Color: {r: 0.2901961, g: 0.5764706, b: 0.69803923, a: 1}
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -178,6 +178,7 @@ MonoBehaviour:
   speedMult: 0
   mainCamera: {fileID: 0}
   lightPrefab: {fileID: 0}
+  meepFollowers: 0
 --- !u!54 &2325445056110396049
 Rigidbody:
   m_ObjectHideFlags: 0
