@@ -14,11 +14,10 @@ public class GrandMeep : MonoBehaviour
     private GameObject lightPrefab;
     private GameObject light;
     public int meepFollowers;
-
+    [SerializeField] private GameObject GMLight;
     private void Start()
     {
         mainCamera = FindObjectOfType<Camera>();
-        meepFollowers = 0;
     }
 
     void Update()
@@ -33,17 +32,19 @@ public class GrandMeep : MonoBehaviour
             }         
         }
         if (Input.GetMouseButtonUp(0)) Destroy(light);
+        GMLight.GetComponent<Light>().range = meepFollowers + 3;
         
         transform.Translate(Input.GetAxis("Horizontal")/speedMult, Input.GetAxis("Vertical")/speedMult,0);
     }
     
     private void UpdateLight()
     {
-    /*
-    take number of meep followers
-    get light source reference
-    set either lintensity or range to be increase by a ratio depended on amount of meeps
-    possible 10 % increase for every meep?
-    */
+        /*
+        take number of meep followers
+        get light source reference
+        set either lintensity or range to be increase by a ratio depended on amount of meeps
+        possible 10 % increase for every meep?
+        */
     }
 }
+
