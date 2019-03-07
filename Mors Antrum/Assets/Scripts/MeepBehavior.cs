@@ -14,17 +14,21 @@ public class MeepBehavior : MonoBehaviour
     
     
 
-    private enum state
+    public enum state
     {
         followGM,
         followLight,
         idle,
         eaten
     }
+    
+
+    //added this because it wouldn't let me just set a state in MeepEating - Kail
+    public state dead = state.eaten;  
 
     public float testDistance;
     [SerializeField]
-    private state myState = state.idle;
+    public state myState = state.idle;
        // Start is called before the first frame update
        void Start()
        {
