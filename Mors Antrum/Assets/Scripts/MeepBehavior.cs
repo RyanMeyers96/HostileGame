@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Playables;
+using Random = UnityEngine.Random;
 
 public class MeepBehavior : MonoBehaviour
 {
@@ -11,8 +13,16 @@ public class MeepBehavior : MonoBehaviour
     private GameObject grandMeep;
     private bool following = false;
     private GameObject light;
-    
-    
+    private bool seenPlayer;
+
+    [SerializeField] private AudioClip[] happyAudio;
+    [SerializeField] private AudioClip[] sadAudio;
+    [SerializeField] private AudioClip[] curiousAudio;
+    [SerializeField] private AudioClip[] DeathAudio;
+    public AudioSource Source;
+    [SerializeField] private float time;
+
+    [SerializeField] private int waitTime;
 
     private enum state
     {
@@ -30,7 +40,8 @@ public class MeepBehavior : MonoBehaviour
        {
            navMeshAgent = GetComponent<NavMeshAgent>();
            grandMeep = GameObject.FindWithTag("Player");
-          
+           Source = GetComponent<AudioSource>();
+           waitTime = Random.Range(0, 3);
        }
 
        public void LightSummoned(GameObject newLight)
@@ -47,6 +58,17 @@ public class MeepBehavior : MonoBehaviour
            switch (myState)
            {           
                case state.idle:
+                   if (time > waitTime)
+                   {
+                       if (seenPlayer)
+                       {
+                           PlayAudio(sadAudio);
+                       }
+                       else
+                       {
+                           PlayAudio(happyAudio);
+                       }
+                   }
                GrandMeep.OnSummonedLight -= LightSummoned;
                    if (CheckDistance())
                    {
@@ -55,6 +77,7 @@ public class MeepBehavior : MonoBehaviour
                    Move(gameObject);
                    break;
                case  state.followGM:
+                   if (time > waitTime) PlayAudio(happyAudio);
                    if (CheckDistance())
                    {
                         CheckSight();
@@ -64,15 +87,19 @@ public class MeepBehavior : MonoBehaviour
                    Move(grandMeep);
                    break;
                case state.followLight:
+                   if (time > waitTime) PlayAudio(curiousAudio);
                    GrandMeep.OnSummonedLight -= LightSummoned;
                    if (light) Move(light);
                    else myState = state.idle;
                    break;
                case state.eaten:
+                   if (time > waitTime) PlayAudio(DeathAudio);
                    GrandMeep.OnSummonedLight -= LightSummoned;
                    Destroy(gameObject);
                    break;
            }
+
+           time += Time.deltaTime;
        }
 
        #region CheckingCode
@@ -123,6 +150,14 @@ public class MeepBehavior : MonoBehaviour
        private void Move(GameObject target)
        {
            navMeshAgent.destination = target.transform.position;
+       }
+
+       public void PlayAudio(AudioClip[] sound)
+       {
+           Source.clip = sound[Random.Range(0, sound.Length)];
+           Source.Play();
+           waitTime = Random.Range(0, 3);
+           time = 0;
        }
     /*  collision with grand meep? check for light?
     *   add meeps to event cast from grand meep and target grand meep
