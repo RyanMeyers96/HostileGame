@@ -179,6 +179,7 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   lightPrefab: {fileID: 0}
   meepFollowers: 0
+  GMLight: {fileID: 1077376187361398}
 --- !u!54 &2325445056110396049
 Rigidbody:
   m_ObjectHideFlags: 0
