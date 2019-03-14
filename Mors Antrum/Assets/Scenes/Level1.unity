@@ -2035,14 +2035,12 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: -12}
   boundX: 0
   boundY: 0
-  ceiling: {fileID: 0}
-  floor: {fileID: 0}
-  leftWall: {fileID: 0}
-  rightWall: {fileID: 0}
-  leftWallOffset: 0
-  rightWallOffset: 0
-  ceilingOffset: 0
-  floorOffset: 0
+  objTop: {fileID: 1076586784}
+  objBottom: {fileID: 1068232583}
+  objLeft: {fileID: 424115687}
+  objRight: {fileID: 1781509387}
+  offsetX: 4.5
+  offsetY: 3.2
   smoothSpeed: 0.125
 --- !u!1 &287625113
 GameObject:
@@ -3442,6 +3440,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4154014356825050, guid: bc0626b6bd883e74c968795314563776,
     type: 3}
   m_PrefabInstance: {fileID: 423283310}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &424115687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1537463494213790, guid: 05c06a57e9c8c5847a34275e6e731897,
+    type: 3}
+  m_PrefabInstance: {fileID: 1459464693}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &432088245
 GameObject:
@@ -14919,6 +14923,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781154550}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1781509387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1537463494213790, guid: 05c06a57e9c8c5847a34275e6e731897,
+    type: 3}
+  m_PrefabInstance: {fileID: 271690656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1805201225
 PrefabInstance:
   m_ObjectHideFlags: 0
