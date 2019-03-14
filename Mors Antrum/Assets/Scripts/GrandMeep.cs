@@ -37,14 +37,5 @@ public class GrandMeep : MonoBehaviour
         transform.Translate(Input.GetAxis("Horizontal")/speedMult, Input.GetAxis("Vertical")/speedMult,0);
     }
     
-    private void UpdateLight()
-    {
-        /*
-        take number of meep followers
-        get light source reference
-        set either lintensity or range to be increase by a ratio depended on amount of meeps
-        possible 10 % increase for every meep?
-        */
-    }
 }
 
