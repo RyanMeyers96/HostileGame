@@ -110,10 +110,10 @@ TextureImporter:
       name: MenuIndicator-04_0
       rect:
         serializedVersion: 2
-        x: 195
-        y: 101
-        width: 599
-        height: 260
+        x: 211
+        y: 116
+        width: 575
+        height: 236
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -110,10 +110,10 @@ TextureImporter:
       name: Play-03_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 34
-        width: 436
-        height: 236
+        x: 46
+        y: 39
+        width: 422
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,7 +121,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd8791b82ce96984cb11fd98a13dcb60
+      spriteID: 0780ea2b9f1177b4d99e00264a4c51d0
       vertices: []
       indices: 
       edges: []
