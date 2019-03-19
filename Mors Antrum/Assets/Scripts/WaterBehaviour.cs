@@ -7,11 +7,13 @@ public class WaterBehaviour : MonoBehaviour
 {
     public float waterSpeed;
     public GameObject grandMeep;
+    public string levelName;
 
     // Start is called before the first frame update
     void Start()
     {
         waterSpeed = 0.01f;
+        levelName = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class WaterBehaviour : MonoBehaviour
     {
         if(other.gameObject == grandMeep)
         {
-            SceneManager.LoadScene("Level3", LoadSceneMode.Single);
+            SceneManager.LoadScene(levelName, LoadSceneMode.Single);
         }
     }
 }
