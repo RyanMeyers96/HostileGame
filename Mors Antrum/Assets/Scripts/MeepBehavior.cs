@@ -158,8 +158,11 @@ public class MeepBehavior : MonoBehaviour
 
        public void PlayAudio(AudioClip[] sound)
        {
-           Source.clip = sound[Random.Range(0, sound.Length)];
-           Source.Play();
+           if (Random.Range(0, 10) > 7)
+           {
+               Source.clip = sound[Random.Range(0, sound.Length)];
+               Source.Play();
+           }
            waitTime = Random.Range(0, 3);
            time = 0;
        }
