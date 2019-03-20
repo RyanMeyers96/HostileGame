@@ -163,7 +163,7 @@ public class MeepBehavior : MonoBehaviour
                Source.clip = sound[Random.Range(0, sound.Length)];
                Source.Play();
            }
-           waitTime = Random.Range(0, 3);
+           waitTime = Random.Range(0, 5);
            time = 0;
        }
     /*  collision with grand meep? check for light?
