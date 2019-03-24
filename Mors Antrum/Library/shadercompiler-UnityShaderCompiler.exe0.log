@@ -1,5 +1,6 @@
 Base path: D:/Unity/Editor/Data
 Cmd: initializeCompiler
+<<<<<<< Updated upstream
 Cmd: preprocess
   insize=2348 outsize=632 ok=1
 Cmd: compileSnippet
@@ -579,3 +580,5 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+=======
+>>>>>>> Stashed changes
