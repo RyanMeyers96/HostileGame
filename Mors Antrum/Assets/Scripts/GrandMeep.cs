@@ -15,7 +15,7 @@ public class GrandMeep : MonoBehaviour
     private GameObject light;
     public int meepFollowers;
     [SerializeField] private GameObject GMLight;
-    private float time = 0;
+    public float time = 0;
     private void Start()
     {
         mainCamera = FindObjectOfType<Camera>();
@@ -30,12 +30,13 @@ public class GrandMeep : MonoBehaviour
             {                
                 light = Instantiate(lightPrefab, new Vector3(hit.point.x, hit.point.y, 1), new Quaternion(0, 0, 0, 0));
                 if (OnSummonedLight != null)OnSummonedLight(light);
+                time = 1;
             }         
         }
         if (Input.GetMouseButtonUp(0)) 
         {
         Destroy(light);
-        time = 1;
+        
         }
         time -= Time.deltaTime;
         GMLight.GetComponent<Light>().range = meepFollowers + 3;
