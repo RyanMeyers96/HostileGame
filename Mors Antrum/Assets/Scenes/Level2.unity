@@ -5337,7 +5337,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1715620401529620, guid: cf96c725b5dae894291a73d8d0ef3e47, type: 3}
       propertyPath: m_Name
-      value: Moving_Platform
+      value: Moving_Platform1
       objectReference: {fileID: 0}
     - target: {fileID: 4998628169915434, guid: cf96c725b5dae894291a73d8d0ef3e47, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7919,7 +7919,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1715620401529620, guid: cf96c725b5dae894291a73d8d0ef3e47, type: 3}
       propertyPath: m_Name
-      value: Moving_Platform (1)
+      value: Moving_Platform2
       objectReference: {fileID: 0}
     - target: {fileID: 4998628169915434, guid: cf96c725b5dae894291a73d8d0ef3e47, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17702,21 +17702,6 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 282840813}
-    - target: {fileID: 2325445056110396049, guid: aff03258997132a4c8c37f0e89fde604,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 2325445056110396049, guid: aff03258997132a4c8c37f0e89fde604,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2325445056110396049, guid: aff03258997132a4c8c37f0e89fde604,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 108288188026662214, guid: aff03258997132a4c8c37f0e89fde604,
         type: 3}
       propertyPath: m_Color.r
@@ -17736,6 +17721,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Intensity
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325445056110396049, guid: aff03258997132a4c8c37f0e89fde604,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325445056110396049, guid: aff03258997132a4c8c37f0e89fde604,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325445056110396049, guid: aff03258997132a4c8c37f0e89fde604,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aff03258997132a4c8c37f0e89fde604, type: 3}
