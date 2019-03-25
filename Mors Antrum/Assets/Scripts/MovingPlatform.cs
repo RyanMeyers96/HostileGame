@@ -28,7 +28,10 @@ public class MovingPlatform : MonoBehaviour
         {
             //StartCoroutine("Wait");
             Delay();
+            
         }
+
+
         if (CurrentPoint >= Waypoints.Length)
         {
             CurrentPoint = 0;
