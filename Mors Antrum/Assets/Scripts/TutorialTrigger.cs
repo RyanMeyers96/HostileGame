@@ -5,53 +5,41 @@ using UnityEngine.UI;
 
 public class TutorialTrigger : MonoBehaviour
 {
-    //[SerializeField] private Image customImage;
+    [SerializeField] private Image tutorialImage;
+    //private Transform imageappear;
+    public Image uiImage;
 
 
-    // Start is called before the first frame update
-    void Start()
+    void OnTriggerEnter(Collider other) //collide with player with tutorial image appear
     {
-        
+        if (other.CompareTag("Player")) //Image appear to player when tag
+        {
+            //GameObject.Instantiate(imageappear, new Vector3(0, 0, 0), Quaternion.identity);
+            tutorialImage.enabled = true;
+            Destroy(uiImage.gameObject, 3);
+            Destroy(gameObject, 3);
+
+
+
+
+
+
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+
+    /*void OnTriggerExit(Collider other) //image disappear when player exit the triggerbox
     {
-        
-    }
 
-    /* void OnTriggerEnter(collider other) //collide with player with tutorial
-     {
-         if (other.CompareTag("Player")) //Image appear to player when tag
-         {
-            Instantiate(prefab, new Vector3 (x, y,0), Quaternion.identity); 
-            Destroy(GameObject);                    //how to make tutorial disappear after compeleted
-
-
-
-         }
- 
-     }
-
-    void OnTriggerEnter(collider other)
-    { 
         if (other.CompareTag("Player"))
         {
-            customImage.enable = true;
+            tutorialImage.enabled = false;
+            Destroy(gameObject, 3);    
         }
-    
-    }
-    
-    void OnTriggerExit(collider other)
-    { 
-        if (other.CompareTag("Player"))
-        {
-            customImage.enable = false;
-        }
-    
-    }
+    }*/
 
 
-
-     */
 }
+
+
+
