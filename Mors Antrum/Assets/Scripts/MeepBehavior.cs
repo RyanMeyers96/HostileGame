@@ -78,7 +78,7 @@ public class MeepBehavior : MonoBehaviour
                    {
                        CheckSight();
                    }
-                   Move(gameObject);
+                   Move(this.gameObject);
                    break;
                case  state.followGM:
                    if (time > waitTime) PlayAudio(happyAudio);
