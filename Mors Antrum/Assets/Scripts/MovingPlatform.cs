@@ -19,12 +19,12 @@ public class MovingPlatform : MonoBehaviour
     }
     void Update()
     {
-        if (transform.position.y != Waypoints[CurrentPoint].transform.position.y)
+        if (transform.position != Waypoints[CurrentPoint].transform.position)
         {
             transform.position = Vector3.MoveTowards(transform.position, Waypoints[CurrentPoint].transform.position, speed * Time.deltaTime);
         }
 
-        if (transform.position.y == Waypoints[CurrentPoint].transform.position.y)
+        if (transform.position == Waypoints[CurrentPoint].transform.position)
         {
             //StartCoroutine("Wait");
             Delay();
