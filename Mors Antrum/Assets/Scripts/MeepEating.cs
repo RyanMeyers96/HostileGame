@@ -5,26 +5,38 @@ using UnityEngine;
 public class MeepEating : MonoBehaviour
 {
 
-    public GameObject objTrigger;
-    public List<MeepBehavior> meepsToBeDead;
+    private GameObject objTrigger;
+    private MeepBehavior eatMeep;
+    //public List<MeepBehavior> meepsToBeDead;  - no longer needed
+    private GrandMeep eatPlayer;
 
     public int meepsWanted = 1; //how many meeps the nope wants to eat
-    public int meepsHad;//how many meeps the nope has in its mouth
+    public int meepsHad;//how many meeps the nope has eaten
     
     
     private void OnTriggerEnter(Collider other)
     {
-        //everytime someone enters its mouth it checks if it is a meep, if so meeps had goes up
+        //everytime a meep enters its mouth, it eats the meep
 
         objTrigger = other.gameObject;
+        eatMeep = objTrigger.GetComponent<MeepBehavior>();
+        eatPlayer = objTrigger.GetComponent<GrandMeep>();
         
-        if (objTrigger.GetComponent<MeepBehavior>() != null)
+        if (eatMeep != null)
         {
+            //make meeps jump
             meepsHad++;
-            meepsToBeDead.Add(objTrigger.GetComponent<MeepBehavior>());
+            eatMeep.myState = eatMeep.dead;
+            //meepsToBeDead.Add(objTrigger.GetComponent<MeepBehavior>()); - no longer useful, now that each meep is being eaten one at a time
+        }
+
+        if (eatPlayer != null)
+        {
+            //the player is eaten by the meep
         }
     }
 
+    /*  No longer useful now that the meeps are being eaten one at a time
     private void OnTriggerExit(Collider other)
     {
         //everytime someone exits its mouth it checks if it is a meep, if yes meepsHad goes down
@@ -36,11 +48,11 @@ public class MeepEating : MonoBehaviour
             meepsHad--;
             meepsToBeDead.Remove(objTrigger.GetComponent<MeepBehavior>());
         }
-    }
+    }*/
 
     private void Update()
     {
-        //check if the nope can eat now
+        /*check if the nope can eat now - no longer needed
         if (meepsHad == meepsWanted)
         {
             //insert animation for eating
@@ -49,6 +61,11 @@ public class MeepEating : MonoBehaviour
                 meepsToBeDead[i].myState = meepsToBeDead[i].dead;
             }
 
+            Leave();
+        }*/
+
+        if (meepsHad == meepsWanted)
+        {
             Leave();
         }
     }
@@ -60,3 +77,4 @@ public class MeepEating : MonoBehaviour
         //delete self once done
     }
 }
+
