@@ -937,8 +937,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Hayley Wilson\r\n\nRyan Meyers\r\n\nCelina Hun\r\n\n\nFrey Holley-Evans\r\nNathan
-    Ryan\r\n\nKyle Lyon\r\nTom\r\n\nAndy Chan \r\nGianni Italiano\r\nNikolai Zontov\r\n\nMichael
-    Bleakley\r\nVenus Liao\r\nKail Muse\r\n\n\nBryce Erickson\r\n\nHolly Benton"
+    Ryan\r\n\nKyle Lyon\r\nTom\r Wormald\n\nAndy Chan \r\nGianni Italiano\r\nNikolai
+    Zontov\r\n\nMichael Bleakley\r\nVenus Liao\r\nKail Muse\r\n\n\nBryce Erickson\r\n\nHolly
+    Benton"
 --- !u!222 &1169266425
 CanvasRenderer:
   m_ObjectHideFlags: 0
