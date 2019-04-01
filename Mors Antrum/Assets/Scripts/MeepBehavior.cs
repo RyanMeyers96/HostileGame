@@ -192,4 +192,12 @@ public class MeepBehavior : MonoBehaviour
             Physics.IgnoreCollision(grandMeep.GetComponent<Collider>(), this.gameObject.GetComponent<Collider>());
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "MovingPlatform")
+        {
+            Destroy(gameObject.GetComponent<NavMeshAgent>());
+        }
+    }
 }

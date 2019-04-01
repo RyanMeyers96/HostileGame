@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MovingPlatform : MonoBehaviour
 {
     public Transform[] Waypoints;
     public float speed = 2;
-
+    public GameObject meep;
     public int CurrentPoint = 0;
-
+    
     //private IEnumerator coroutine;
     public float DelayTime;
     public float CurrentTimer;
-
+    
     void Start()
     {
         CurrentTimer = DelayTime;
@@ -30,7 +31,7 @@ public class MovingPlatform : MonoBehaviour
             Delay();
             
         }
-
+       
 
         if (CurrentPoint >= Waypoints.Length)
         {
@@ -52,4 +53,6 @@ public class MovingPlatform : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, transform.position, speed * Time.deltaTime);   // Probably better way
         }
     }
+
+    
 }
