@@ -14,7 +14,7 @@ public class MeepBehavior : MonoBehaviour
     private bool following = false;
     private GameObject light;
     private bool seenPlayer;
-    public bool platform;
+    
 
     [SerializeField] private AudioClip[] happyAudio;
     [SerializeField] private AudioClip[] sadAudio;
@@ -107,14 +107,7 @@ public class MeepBehavior : MonoBehaviour
                 break;
         }
 
-        if (platform)
-        {
-            this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
-        }
-        else
-        {
-            this.gameObject.GetComponent<NavMeshAgent>().enabled = true;
-        }
+      
 
         time += Time.deltaTime;
     }
@@ -212,20 +205,12 @@ public class MeepBehavior : MonoBehaviour
     {
         if (other.gameObject.tag == "MovingPlatform")
         {
-            platform = true;
+
             this.transform.Translate(Vector3.up * Time.deltaTime);
             Debug.Log("trigger works fucker");
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "MovingPlatform")
-        {
-            platform = false;
-            
-            
-        }
-
-    }
+   
+    
 }
