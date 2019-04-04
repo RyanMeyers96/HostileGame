@@ -14,7 +14,11 @@ public class MeepBehavior : MonoBehaviour
     private bool following = false;
     private GameObject light;
     private bool seenPlayer;
-    
+    private bool dying = false;
+    public GameObject nope;
+
+    [SerializeField]
+    private Animator jump;
 
     [SerializeField] private AudioClip[] happyAudio;
     [SerializeField] private AudioClip[] sadAudio;
@@ -62,6 +66,7 @@ public class MeepBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         CheckFollower();
         switch (myState)
         {
@@ -101,15 +106,21 @@ public class MeepBehavior : MonoBehaviour
                 else myState = state.idle;
                 break;
             case state.eaten:
-                if (time > waitTime) PlayAudio(DeathAudio);
                 GrandMeep.OnSummonedLight -= LightSummoned;
-                Destroy(gameObject);
+                if (!dying) StartCoroutine(Death());
                 break;
         }
-
-      
-
         time += Time.deltaTime;
+    }
+
+    IEnumerator Death()
+    {
+        dying = true;
+        Move(nope);
+        yield return  new WaitForSeconds(1);
+        PlayAudio(DeathAudio);
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
     }
 
     #region CheckingCode
@@ -161,6 +172,7 @@ public class MeepBehavior : MonoBehaviour
     #endregion
     private void Move(GameObject target)
     {
+        jump.SetBool("Jump", navMeshAgent.isOnOffMeshLink);          
         navMeshAgent.destination = target.transform.position;
     }
 
