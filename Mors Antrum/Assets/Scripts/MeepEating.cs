@@ -9,6 +9,7 @@ public class MeepEating : MonoBehaviour
     private MeepBehavior eatMeep;
     //public List<MeepBehavior> meepsToBeDead;  - no longer needed
     private GrandMeep eatPlayer;
+    [SerializeField] private GameObject mouth;
 
     public int meepsWanted = 1; //how many meeps the nope wants to eat
     public int meepsHad;//how many meeps the nope has eaten
@@ -27,6 +28,7 @@ public class MeepEating : MonoBehaviour
             //make meeps jump
             meepsHad++;
             eatMeep.myState = eatMeep.dead;
+            eatMeep.nope = mouth;
             //meepsToBeDead.Add(objTrigger.GetComponent<MeepBehavior>()); - no longer useful, now that each meep is being eaten one at a time
         }
 

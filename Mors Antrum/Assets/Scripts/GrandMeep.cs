@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GrandMeep : MonoBehaviour
 {
@@ -43,6 +44,13 @@ public class GrandMeep : MonoBehaviour
         
         transform.Translate(Input.GetAxis("Horizontal")/speedMult, Input.GetAxis("Vertical")/speedMult,0);
     }
-    
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag.Equals("Nope"))
+        {
+            SceneManager.LoadScene("Credits");
+        }
+    }
 }
 

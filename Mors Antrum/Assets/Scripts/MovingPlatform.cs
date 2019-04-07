@@ -23,6 +23,7 @@ public class MovingPlatform : MonoBehaviour
         if (transform.position != Waypoints[CurrentPoint].transform.position)
         {
             transform.position = Vector3.MoveTowards(transform.position, Waypoints[CurrentPoint].transform.position, speed * Time.deltaTime);
+            
         }
 
         if (transform.position == Waypoints[CurrentPoint].transform.position)
@@ -31,12 +32,31 @@ public class MovingPlatform : MonoBehaviour
             Delay();
             
         }
+<<<<<<< HEAD
        
+=======
 
+        /*if (transform.position == Waypoints[0].transform.position)
+        {
+            Debug.Log("on the bottom");
+            this.gameObject.GetComponent<BoxCollider>().enabled = true;
+
+        }
+
+        if (transform.position != Waypoints[0].transform.position)
+        {
+            Debug.Log("on the top");
+            this.gameObject.GetComponent<BoxCollider>().enabled = false;
+>>>>>>> master
+
+        }*/
         if (CurrentPoint >= Waypoints.Length)
         {
+            
             CurrentPoint = 0;
         }
+        
+        
     }
 
     private void Delay()
@@ -54,5 +74,8 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
     
+=======
+>>>>>>> master
 }
