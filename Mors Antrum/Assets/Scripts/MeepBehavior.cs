@@ -213,15 +213,8 @@ public class MeepBehavior : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "MovingPlatform")
-        {
-
-            this.transform.Translate(Vector3.up * Time.deltaTime);
-            Debug.Log("trigger works fucker");
-        }
-    }
+    
+  
 
    
     

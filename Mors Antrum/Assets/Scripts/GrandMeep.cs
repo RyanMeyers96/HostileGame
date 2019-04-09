@@ -22,7 +22,7 @@ public class GrandMeep : MonoBehaviour
 
     private void Start()
     {
-        mainCamera = FindObjectOfType<Camera>();
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<Camera>();
     }
 
     void Update()
