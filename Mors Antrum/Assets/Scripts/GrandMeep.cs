@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GrandMeep : MonoBehaviour
 {
-
+    
     public delegate void SummonLight(GameObject light);
     public static event SummonLight OnSummonedLight;
     [SerializeField] private float speedMult;
@@ -17,6 +17,9 @@ public class GrandMeep : MonoBehaviour
     public int meepFollowers;
     [SerializeField] private GameObject GMLight;
     public float time = 0;
+
+    
+
     private void Start()
     {
         mainCamera = FindObjectOfType<Camera>();
