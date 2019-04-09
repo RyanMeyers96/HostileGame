@@ -27,6 +27,7 @@ public class MeepEating : MonoBehaviour
         {
             //make meeps jump
             meepsHad++;
+            GameObject.Find("MeepCount").GetComponent<MeepCountScript>().meepCount++;
             eatMeep.myState = eatMeep.dead;
             eatMeep.nope = mouth;
             //meepsToBeDead.Add(objTrigger.GetComponent<MeepBehavior>()); - no longer useful, now that each meep is being eaten one at a time
