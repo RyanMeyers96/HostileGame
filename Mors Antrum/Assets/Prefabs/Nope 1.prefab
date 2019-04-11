@@ -1462,9 +1462,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed38544bf0add443a81dc3300352119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouth: {fileID: 6155942697076277851}
+  mouth: {fileID: 0}
   meepsWanted: 1
   meepsHad: 0
+  eat: 0
+  stop: 0
 --- !u!1 &6476007591584622390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +1997,7 @@ GameObject:
   - component: {fileID: 5240290578389354491}
   - component: {fileID: 8683307802404277187}
   - component: {fileID: 812843811}
+  - component: {fileID: 7879157398852486881}
   m_Layer: 0
   m_Name: Nope 1
   m_TagString: Nope
@@ -2038,7 +2041,7 @@ Animator:
   m_GameObject: {fileID: 8378813097828330683}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5f8d241c0319c9c45a53c546d99eb932, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 58e4213935915074f99b2678e9316732, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2093,6 +2096,19 @@ OffMeshLink:
   m_BiDirectional: 1
   m_Activated: 1
   m_AutoUpdatePositions: 1
+--- !u!114 &7879157398852486881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8378813097828330683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dabb04c6b3649a45b65269f5310049f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eating: {fileID: 0}
 --- !u!1 &8839910037902939625
 GameObject:
   m_ObjectHideFlags: 0
