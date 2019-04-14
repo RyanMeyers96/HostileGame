@@ -182,6 +182,7 @@ MonoBehaviour:
   lightPrefab: {fileID: 0}
   meepFollowers: 0
   GMLight: {fileID: 1077376187361398}
+  time: 0
 --- !u!54 &2325445056110396049
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ TagManager:
   - Fire
   - block
   - Meep
-  - MovingPlatform
+  - EatingTrigger
   layers:
   - Default
   - TransparentFX

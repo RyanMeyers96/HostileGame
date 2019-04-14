@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: cfef7ee96be6b9e4791016493c195fd1
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ikHandle1
+    100002: ikHandle2
+    100004: ikHandle3
+    100006: ikHandle4
+    100008: joint1
+    100010: joint10
+    100012: joint11
+    100014: joint12
+    100016: joint13
+    100018: joint14
+    100020: joint15
+    100022: joint2
+    100024: joint25
+    100026: joint26
+    100028: joint27
+    100030: joint28
+    100032: joint29
+    100034: joint3
+    100036: joint30
+    100038: joint31
+    100040: joint32
+    100042: joint33
+    100044: joint34
+    100046: joint35
+    100048: joint36
+    100050: joint37
+    100052: joint38
+    100054: joint39
+    100056: joint4
+    100058: joint40
+    100060: joint41
+    100062: joint42
+    100064: joint43
+    100066: joint44
+    100068: joint45
+    100070: joint46
+    100072: joint47
+    100074: joint48
+    100076: joint49
+    100078: joint5
+    100080: joint50
+    100082: joint51
+    100084: joint52
+    100086: joint53
+    100088: joint54
+    100090: joint55
+    100092: joint6
+    100094: joint7
+    100096: joint8
+    100098: joint9
+    100100: locator1
+    100102: locator2
+    100104: NopeRigg1
+    100106: //RootNode
+    400000: ikHandle1
+    400002: ikHandle2
+    400004: ikHandle3
+    400006: ikHandle4
+    400008: joint1
+    400010: joint10
+    400012: joint11
+    400014: joint12
+    400016: joint13
+    400018: joint14
+    400020: joint15
+    400022: joint2
+    400024: joint25
+    400026: joint26
+    400028: joint27
+    400030: joint28
+    400032: joint29
+    400034: joint3
+    400036: joint30
+    400038: joint31
+    400040: joint32
+    400042: joint33
+    400044: joint34
+    400046: joint35
+    400048: joint36
+    400050: joint37
+    400052: joint38
+    400054: joint39
+    400056: joint4
+    400058: joint40
+    400060: joint41
+    400062: joint42
+    400064: joint43
+    400066: joint44
+    400068: joint45
+    400070: joint46
+    400072: joint47
+    400074: joint48
+    400076: joint49
+    400078: joint5
+    400080: joint50
+    400082: joint51
+    400084: joint52
+    400086: joint53
+    400088: joint54
+    400090: joint55
+    400092: joint6
+    400094: joint7
+    400096: joint8
+    400098: joint9
+    400100: locator1
+    400102: locator2
+    400104: NopeRigg1
+    400106: //RootNode
+    2100000: Nope_Mat
+    4300000: NopeRigg1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: NopeRigg1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
