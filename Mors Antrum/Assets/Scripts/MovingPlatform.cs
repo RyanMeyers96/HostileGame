@@ -5,12 +5,18 @@ using UnityEngine.AI;
 
 public class MovingPlatform : MonoBehaviour
 {
+    // Fields go here...
     public Transform[] Waypoints;
+<<<<<<< HEAD
     public float speed = 2;
     public GameObject meep;
     public int CurrentPoint = 0;
     
     //private IEnumerator coroutine;
+=======
+    public int CurrentPoint = 0;
+    public float speed = 2;
+>>>>>>> master
     public float DelayTime;
     public float CurrentTimer;
     
@@ -18,24 +24,23 @@ public class MovingPlatform : MonoBehaviour
     {
         CurrentTimer = DelayTime;
     }
+
     void Update()
     {
         if (transform.position != Waypoints[CurrentPoint].transform.position)
         {
             transform.position = Vector3.MoveTowards(transform.position, Waypoints[CurrentPoint].transform.position, speed * Time.deltaTime);
-            
         }
 
         if (transform.position == Waypoints[CurrentPoint].transform.position)
         {
-            //StartCoroutine("Wait");
             Delay();
-            
         }
 <<<<<<< HEAD
        
 =======
 
+<<<<<<< HEAD
         /*if (transform.position == Waypoints[0].transform.position)
         {
             Debug.Log("on the bottom");
@@ -50,13 +55,12 @@ public class MovingPlatform : MonoBehaviour
 >>>>>>> master
 
         }*/
+=======
+>>>>>>> master
         if (CurrentPoint >= Waypoints.Length)
         {
-            
             CurrentPoint = 0;
         }
-        
-        
     }
 
     private void Delay()

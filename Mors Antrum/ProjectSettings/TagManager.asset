@@ -10,7 +10,7 @@ TagManager:
   - block
 >>>>>>> master
   - Meep
-  - MovingPlatform
+  - EatingTrigger
   layers:
   - Default
   - TransparentFX

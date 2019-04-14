@@ -213,6 +213,7 @@ public class MeepBehavior : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "MovingPlatform")
@@ -220,4 +221,11 @@ public class MeepBehavior : MonoBehaviour
             Destroy(gameObject.GetComponent<NavMeshAgent>());
         }
     }
+=======
+    
+  
+
+   
+    
+>>>>>>> master
 }
