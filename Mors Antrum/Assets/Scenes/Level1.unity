@@ -13524,7 +13524,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mouth
       value: 
-      objectReference: {fileID: 1598937914}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01f1ade2bf7c952449d24a106c747106, type: 3}
 --- !u!4 &1142891342 stripped
@@ -18283,12 +18283,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.67, y: 2.62, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1598937914 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6155942697076277851, guid: 01f1ade2bf7c952449d24a106c747106,
-    type: 3}
-  m_PrefabInstance: {fileID: 1142891341}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1603657087 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1959541001223950, guid: bc0626b6bd883e74c968795314563776,
@@ -25063,6 +25057,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Construction Light | Delete later
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575736311374695443, guid: 91ffcc8e891cc4a419f0818cd882c014,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2575736311374695445, guid: 91ffcc8e891cc4a419f0818cd882c014,
         type: 3}

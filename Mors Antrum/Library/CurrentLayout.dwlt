@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 548}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 2560
     height: 1357
-  m_MinSize: {x: 950, y: 548}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 498}
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
-  controlID: 14102
+  controlID: 178
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 498}
   m_MaxSize: {x: 14006, y: 14048}
   vertical: 1
-  controlID: 14103
+  controlID: 179
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 224}
   m_MaxSize: {x: 12010, y: 4024}
   vertical: 0
-  controlID: 14104
+  controlID: 180
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_MinSize: {x: 336, y: 274}
   m_MaxSize: {x: 14006, y: 10024}
   vertical: 0
-  controlID: 14070
+  controlID: 63
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -288,7 +288,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 986
+    width: 744
     height: 468
   m_MinSize: {x: 232, y: 274}
   m_MaxSize: {x: 10002, y: 10024}
@@ -312,9 +312,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 986
+    x: 744
     y: 0
-    width: 1055
+    width: 1297
     height: 468
   m_MinSize: {x: 104, y: 124}
   m_MaxSize: {x: 4004, y: 4024}
@@ -463,7 +463,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 048dfeff0e97fefff6a1feff0ca8feff46aafeff18aefefff6affeffd6b1feffacb3feffccc0feffd0c0feffecc0feff26c1feff82c1feff7cc2feffb4c2feffa8e6fefff6e6feff421bffff5042ffff5263ffffa065ffffe6810000d084000072850000a286000096880000868a0000001901000c190100121901001a190100301901000c3d0100103d0100203d0100ce5c01005e5d010062640100ca64010028650100ca6b0100326c0100906c01007e790100e6790100467a0100ce7e0100e87e0100ba800100468601001e870100
+      m_ExpandedIDs: d4fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -680,7 +680,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 912
-    width: 984
+    width: 742
     height: 448
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -695,20 +695,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/HolyShift/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/HolyShift/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\rmeyers\Documents\HostileGame\Mors Antrum
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9c790000
-    m_LastClickedID: 31132
-    m_ExpandedIDs: 000000009c790000c6790000ce7900006a7a0000ca7b0000be7f000068810000e0ee00000eef000000ca9a3b
+    scrollPos: {x: 0, y: 207}
+    m_SelectedIDs: 34120000
+    m_LastClickedID: 4660
+    m_ExpandedIDs: 000000000a0e0000960e00009e0e00000610000064100000a2120000da120000bc160000f01600008e1a00005a1e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -736,7 +736,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009c790000c6790000ce7900006a7a0000ca7b0000be7f000068810000e0ee00000eef000000ca9a3b
+    m_ExpandedIDs: 000000000a0e0000960e00009e0e00000610000064100000a2120000da120000bc160000f01600008e1a00005a1e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -763,7 +763,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300007a340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -812,9 +812,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 986
+    x: 744
     y: 912
-    width: 1051
+    width: 1293
     height: 448
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &22
