@@ -17,12 +17,14 @@ public class GrandMeep : MonoBehaviour
     public int meepFollowers;
     [SerializeField] private GameObject GMLight;
     public float time = 0;
+    public string levelName;
 
-    
+
 
     private void Start()
     {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<Camera>();
+        levelName = SceneManager.GetActiveScene().name;
     }
 
     void Update()
@@ -52,7 +54,7 @@ public class GrandMeep : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Nope"))
         {
-            SceneManager.LoadScene("Credits");
+            SceneManager.LoadScene(levelName, LoadSceneMode.Single);
         }
     }
 }
