@@ -40,6 +40,7 @@ public class MeepEating : MonoBehaviour
         {
             eat = true;
             //eat player
+            
             eat = false;
         }
     }

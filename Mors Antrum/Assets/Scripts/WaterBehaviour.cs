@@ -9,6 +9,7 @@ public class WaterBehaviour : MonoBehaviour
     public GameObject grandMeep;
     public string levelName;
     public float waterDelay;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class WaterBehaviour : MonoBehaviour
         waterDelay = 5f;
         waterSpeed = 0.01f;
         levelName = SceneManager.GetActiveScene().name;
+        
     }
 
     // Update is called once per frame
@@ -31,9 +33,15 @@ public class WaterBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject == grandMeep)
+        if(other.gameObject == grandMeep) 
         {
             SceneManager.LoadScene(levelName, LoadSceneMode.Single);
+        }
+
+        if (other.gameObject.tag.Equals("Meep"))
+        {
+            GameObject.Find("MeepCount").GetComponent<MeepCountScript>().meepCount++;
+            Destroy(other.gameObject);
         }
     }
 }
