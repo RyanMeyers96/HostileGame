@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8751498454514534180
+--- !u!1 &8568372862602770238
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8751498454515030788}
-  - component: {fileID: 8751498454511639332}
-  - component: {fileID: 8751498454512605668}
+  - component: {fileID: 8568372862603193118}
+  - component: {fileID: 8568372862606060350}
+  - component: {fileID: 8568372862604962302}
   m_Layer: 0
   m_Name: CaveRock6
   m_TagString: Untagged
@@ -18,35 +18,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8751498454515030788
+--- !u!4 &8568372862603193118
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8751498454514534180}
+  m_GameObject: {fileID: 8568372862602770238}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.575305, y: -32.204, z: 4.721}
+  m_LocalPosition: {x: 6.5071692, y: -32.19428, z: 4.3767867}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8751498454511639332
+--- !u!33 &8568372862606060350
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8751498454514534180}
+  m_GameObject: {fileID: 8568372862602770238}
   m_Mesh: {fileID: 4300000, guid: 6422e9e708a61bd4c9d08bcf4e4ab3a8, type: 3}
---- !u!23 &8751498454512605668
+--- !u!23 &8568372862604962302
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8751498454514534180}
+  m_GameObject: {fileID: 8568372862602770238}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
