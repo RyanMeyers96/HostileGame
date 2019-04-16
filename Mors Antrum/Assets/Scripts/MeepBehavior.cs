@@ -213,19 +213,5 @@ public class MeepBehavior : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "MovingPlatform")
-        {
-            Destroy(gameObject.GetComponent<NavMeshAgent>());
-        }
-    }
-=======
-    
-  
 
-   
-    
->>>>>>> master
 }
