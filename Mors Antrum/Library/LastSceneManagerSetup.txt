@@ -1,16 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-- path: Assets/Scenes/Level2.unity
-=======
-- path: Assets/Scenes/Level2.2.unity
->>>>>>> master
-=======
 - path: Assets/Scenes/Level3.2.unity
->>>>>>> Stashed changes
-=======
-- path: Assets/Scenes/Level3.4.unity
->>>>>>> master
   isLoaded: 1
   isActive: 1
