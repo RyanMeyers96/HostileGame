@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1556737980736227523}
   - component: {fileID: 1556737980734900451}
   - component: {fileID: 1556737980733934115}
+  - component: {fileID: 83019833270503520}
   m_Layer: 0
   m_Name: CaveRock11
   m_TagString: Untagged
@@ -77,3 +78,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &83019833270503520
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556737980736197859}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 94bf8f3ac87f9ff47a7fbab224248137, type: 3}

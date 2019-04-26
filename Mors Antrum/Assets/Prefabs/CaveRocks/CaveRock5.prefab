@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5381495254663294396}
   - component: {fileID: 5381495254661967260}
   - component: {fileID: 5381495254660869980}
+  - component: {fileID: 214607565262386735}
   m_Layer: 0
   m_Name: CaveRock5
   m_TagString: Untagged
@@ -77,3 +78,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &214607565262386735
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5381495254662803868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: cc04698634cd70246bf3963de2d18350, type: 3}
