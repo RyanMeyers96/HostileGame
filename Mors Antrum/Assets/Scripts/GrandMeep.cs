@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GrandMeep : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class GrandMeep : MonoBehaviour
     public float time = 0;
     public string levelName;
 
-
+    bool isAlive = true;
 
     private void Start()
     {
@@ -45,14 +46,43 @@ public class GrandMeep : MonoBehaviour
         time -= Time.deltaTime;
         GMLight.GetComponent<Light>().range = meepFollowers + 3;
         
+        if(isAlive)
         transform.Translate(Input.GetAxis("Horizontal")/speedMult, Input.GetAxis("Vertical")/speedMult,0);
+    }
+
+    IEnumerator Death()
+    {
+        isAlive = false;
+
+        //visuals
+        //maybe timeline? maybe animation? at least fade/particle/etc
+
+        //TEMP - Ed did this 
+        float t = 0;
+        while (t < 0.5)
+        {
+            GetComponent<Renderer>().material.color = GetComponent<Renderer>().material.color + new Color(0, 0, 0, 0.05f);
+            t += Time.deltaTime;
+            yield return null;
+        }
+        while (t < 2)
+        {
+            GetComponent<Renderer>().material.color = GetComponent<Renderer>().material.color - new Color(0, 0, 0, 0.1f);
+            t += Time.deltaTime;
+            yield return null;
+        }
+        //ENDTEMP
+
+        SceneManager.LoadScene(levelName, LoadSceneMode.Single);
+        yield return null;
     }
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag.Equals("Nope"))
         {
-            SceneManager.LoadScene(levelName, LoadSceneMode.Single);
+            StartCoroutine("Death");
+            GetComponent<SphereCollider>().enabled = false;
         }
     }
 }
